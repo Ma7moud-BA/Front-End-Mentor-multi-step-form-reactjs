@@ -1,0 +1,36 @@
+.nav-bar {
+	background-image: url("../assets/images/bg-sidebar-desktop.svg");
+	background-repeat: no-repeat;
+	height: 568px;
+	width: 274px;
+	padding: 10px 0 0 20px;
+	color: white;
+}
+
+.nav-page-container {
+	width: 100%;
+	display: grid;
+	grid-template-columns: 50px auto;
+	align-items: center;
+}
+.page-info {
+	display: flex;
+	flex-direction: column;
+	justify-items: center;
+	padding-top: 10px;
+}
+.page-info span {
+	font-size: 0.75rem;
+}
+.nav-page-num {
+	padding: 5px;
+	border: 1px solid black;
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	text-align: center;
+	justify-content: center;
+}
+.nav-page-num.active {
+	background-color: grey;
+}

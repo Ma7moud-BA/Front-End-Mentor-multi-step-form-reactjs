@@ -1,0 +1,33 @@
+.select-your-plan-container {
+	display: flex;
+	flex-direction: column;
+	margin: 0 90px;
+}
+.plans-container {
+	/* background-color: red; */
+	display: flex;
+	justify-content: space-between;
+}
+.plan-container {
+	border: 1px solid black;
+	width: 110px;
+	padding: 10px 0 10px 10px;
+	border-radius: 8px;
+	margin: 0 5px;
+	height: 150px;
+	cursor: pointer;
+}
+.plan-container.active {
+	border-color: blue;
+}
+.offer {
+	font-size: 12px;
+}
+.offer.hidden {
+	display: none;
+}
+.addon-title {
+}
+.addon-info {
+	font-size: 10px;
+}
