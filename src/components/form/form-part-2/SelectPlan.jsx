@@ -42,15 +42,15 @@ const SelectPlan = () => {
 		switch (divId) {
 			case "arcade":
 				arcade.classList.add("active");
-				handleSetPlan("arcade", 90);
+				handleSetPlan("arcade", 9);
 				break;
 			case "advanced":
 				advanced.classList.add("active");
-				handleSetPlan("advanced", 120);
+				handleSetPlan("advanced", 12);
 				break;
 			case "pro":
 				pro.classList.add("active");
-				handleSetPlan("pro", 150);
+				handleSetPlan("pro", 15);
 				break;
 		}
 	};

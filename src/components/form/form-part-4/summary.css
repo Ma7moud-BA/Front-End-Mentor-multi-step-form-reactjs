@@ -13,16 +13,35 @@
 .plan-price {
 	justify-self: end;
 }
-.total {
+/* .total {
 	display: grid;
 	grid-template-columns: 110px 1fr;
-	border: 1px solid black;
-	margin-top: 20px;
-}
+	
+} */
 .total span {
 	font-size: 14px;
 }
 
+.addon-summary-container {
+	display: grid;
+	grid-template-columns: 50px 1fr;
+	border: 1px solid black;
+	margin: 5px 0;
+	align-items: center;
+	padding: 5px;
+}
+.addon-title {
+}
+.addon-price {
+	justify-self: end;
+}
+.total-container {
+	display: grid;
+	grid-template-columns: 120px 1fr;
+	border: 1px solid black;
+	margin-top: 20px;
+	padding: 5px;
+}
 .total-price {
 	justify-self: end;
 }

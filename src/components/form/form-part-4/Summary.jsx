@@ -3,7 +3,8 @@ import Footer from "../../../layout/footer/Footer";
 import FormContext from "../context/FormContext";
 import "./summary.css";
 const Summary = () => {
-	const { plan, handlesetStep } = useContext(FormContext);
+	const { plan, handlesetStep, paymentMethod, addOns, totalPrice } =
+		useContext(FormContext);
 	return (
 		<div className="summary-container">
 			<h1 className="title">Finishing up</h1>
@@ -16,13 +17,45 @@ const Summary = () => {
 						<div className="plan-title">{plan.name}</div>
 						<button onClick={handlesetStep}>change</button>
 					</div>
-					<div className="plan-price">{plan.price}</div>
+					<div className="plan-price">
+						{" "}
+						{paymentMethod == "yearly"
+							? `+$${plan.price * 10}/yr`
+							: `+$${plan.price}/mo`}
+					</div>
 				</div>
-				<div className="addons-selection"></div>
+				<div className="addons-selection">
+					{addOns.map((addon) =>
+						addon.isChecked ? (
+							<div className="addon-summary-container" key={addon.id}>
+								<div className="addon-title">{addon.title}</div>
+								<div className="addon-price">
+									{" "}
+									{paymentMethod == "yearly"
+										? `+$${addon.price * 10}/yr`
+										: `+$${addon.price}/mo`}
+								</div>
+							</div>
+						) : null
+					)}
+				</div>
 			</div>
 			<div className="total">
-				<span> Total(per month)</span>
-				<span className="total-price">{plan.price}</span>
+				{paymentMethod == "yearly" ? (
+					<div className="total-container">
+						<span>Total(yearly)</span>
+						<span className="total-price">{`+$${
+							(totalPrice + plan.price) * 10
+						}/yr`}</span>
+					</div>
+				) : (
+					<div className="total-container">
+						<span>Total(monthly)</span>
+						<span className="total-price">{`+$${
+							totalPrice + plan.price
+						}/mo`}</span>
+					</div>
+				)}
 			</div>
 			<Footer></Footer>
 		</div>
