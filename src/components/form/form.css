@@ -1,0 +1,17 @@
+.form {
+	display: flex;
+	justify-content: start;
+	background-color: white;
+	padding: 10px 0 10px 10px;
+	border-radius: 12px;
+}
+@media only screen and (max-width: 376px) {
+	.form {
+		display: flex;
+		flex-direction: column;
+
+		padding: 0;
+		margin: 0;
+		background-color: var(--albaster);
+	}
+}

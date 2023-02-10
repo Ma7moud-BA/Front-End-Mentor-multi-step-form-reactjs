@@ -14,7 +14,9 @@ const Summary = () => {
 			<div className="selected">
 				<div className="plan-selection">
 					<div>
-						<div className="plan-title">{plan.name}</div>
+						<div className="plan-title">
+							{plan.name}({paymentMethod})
+						</div>
 						<button onClick={handlesetStep}>change</button>
 					</div>
 					<div className="plan-price">
@@ -43,21 +45,21 @@ const Summary = () => {
 			<div className="total">
 				{paymentMethod == "yearly" ? (
 					<div className="total-container">
-						<span>Total(yearly)</span>
+						<span className="total-title">Total(yearly)</span>
 						<span className="total-price">{`+$${
 							(totalPrice + plan.price) * 10
 						}/yr`}</span>
 					</div>
 				) : (
 					<div className="total-container">
-						<span>Total(monthly)</span>
+						<span className="total-title">Total(monthly)</span>
 						<span className="total-price">{`+$${
 							totalPrice + plan.price
 						}/mo`}</span>
 					</div>
 				)}
 			</div>
-			<Footer></Footer>
+			<Footer showGoBack={true}></Footer>
 		</div>
 	);
 };

@@ -1,0 +1,43 @@
+.footer {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 100px;
+}
+
+.backBtn {
+	outline: none;
+	border: none;
+	font-weight: 700;
+	color: var(--Marineblue);
+	background-color: transparent;
+	cursor: pointer;
+}
+.nextBtn {
+	outline: none;
+	border: none;
+	padding: 1rem;
+	border-radius: 8px;
+	background-color: var(--Marineblue);
+	color: white;
+	font-weight: 500;
+	cursor: pointer;
+}
+.nextBtn:hover {
+	opacity: 90%;
+}
+.confirmBtn {
+	outline: none;
+	border: none;
+	padding: 1rem;
+	border-radius: 8px;
+	background-color: var(--Purplishblue);
+	color: white;
+	font-weight: 500;
+	cursor: pointer;
+}
+.confirmBtn:hover {
+	opacity: 90%;
+}
+
+@media only screen and (max-width: 376px) {
+}

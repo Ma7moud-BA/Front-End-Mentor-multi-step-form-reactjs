@@ -2,6 +2,17 @@
 	display: flex;
 	flex-direction: column;
 	margin: 0 90px;
+	row-gap: 10px;
+	padding: 30px 0;
+	width: 455px;
+}
+.title {
+	color: var(--Marineblue);
+	font-weight: 700;
+}
+.desc {
+	color: var(--Cool-gray);
+	font-weight: 500;
 }
 .plans-container {
 	/* background-color: red; */
@@ -9,8 +20,8 @@
 	justify-content: space-between;
 }
 .plan-container {
-	border: 1px solid black;
-	width: 110px;
+	border: 1px solid var(--Cool-gray);
+	width: 130px;
 	padding: 10px 0 10px 10px;
 	border-radius: 8px;
 	margin: 0 5px;
@@ -18,16 +29,138 @@
 	cursor: pointer;
 }
 .plan-container.active {
-	border-color: blue;
+	border-color: var(--Marineblue);
+	background-color: var(--Magnolia);
 }
+.plan-icon {
+	padding: 2px;
+	margin-bottom: 15px;
+}
+.plan-type {
+	font-weight: 700;
+	color: var(--Marineblue);
+}
+.plan-info,
 .offer {
-	font-size: 12px;
+	margin-top: 2px;
+	font-size: 13px;
+	color: var(--Cool-gray);
 }
 .offer.hidden {
 	display: none;
 }
-.addon-title {
+
+.switch-container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	column-gap: 20px;
+	background-color: var(--Magnolia);
+	height: 60px;
 }
-.addon-info {
-	font-size: 10px;
+.switch-container span {
+	text-transform: capitalize;
+	font-weight: 500;
+}
+/*  */
+/* The switch - the box around the slider */
+.switch {
+	position: relative;
+	display: inline-block;
+	width: 60px;
+	height: 34px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+	opacity: 0;
+	width: 0;
+	height: 0;
+}
+
+/* The slider */
+.slider {
+	position: absolute;
+	cursor: pointer;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: #ccc;
+	-webkit-transition: 0.4s;
+	transition: 0.4s;
+}
+
+.slider:before {
+	position: absolute;
+	content: "";
+	height: 26px;
+	width: 26px;
+	left: 4px;
+	bottom: 4px;
+	background-color: white;
+	-webkit-transition: 0.4s;
+	transition: 0.4s;
+}
+
+input:checked + .slider {
+	background-color: #2196f3;
+}
+
+input:focus + .slider {
+	box-shadow: 0 0 1px #2196f3;
+}
+
+input:checked + .slider:before {
+	-webkit-transform: translateX(26px);
+	-ms-transform: translateX(26px);
+	transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+	border-radius: 34px;
+}
+
+.slider.round:before {
+	border-radius: 50%;
+}
+/*  */
+@media only screen and (max-width: 376px) {
+	.select-your-plan-container {
+		display: flex;
+		flex-direction: column;
+		margin: 0 10px;
+		background-color: white;
+		row-gap: 0;
+		padding: 15px;
+		width: auto;
+		transform: translateY(-60px);
+		border-radius: 12px;
+		height: 500px;
+	}
+	.plans-container {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+	}
+	.plan-container {
+		border: 1px solid var(--Cool-gray);
+		width: 100%;
+		height: 80px;
+		padding: 10px 0 10px 10px;
+		border-radius: 8px;
+		margin: 0;
+		cursor: pointer;
+		display: grid;
+		grid-template-columns: 70px 1fr;
+		margin: 5px 0;
+	}
+	.plan-icon {
+		padding: 0;
+		margin-bottom: 0;
+	}
+	.switch-container {
+		margin-top: 10px;
+	}
 }

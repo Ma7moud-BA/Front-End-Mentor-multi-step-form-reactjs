@@ -4,5 +4,13 @@
 	width: 100%;
 	align-items: center;
 	justify-content: center;
-	
+}
+
+@media screen and (max-width: 376px) {
+	.main-container {
+		display: flex;
+		flex-direction: column;
+		justify-content: start;
+		align-items: start;
+	}
 }

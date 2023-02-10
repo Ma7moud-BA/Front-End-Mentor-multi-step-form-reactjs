@@ -33,9 +33,7 @@ const AddOns = () => {
 	return (
 		<div className="pick-addons-container">
 			<h1 className="title"> Pick add-ons</h1>
-			<p className="description">
-				Add-ond help enhancce your gaming experience
-			</p>
+			<p className="desc">Add-ond help enhancce your gaming experience</p>
 			<div className="addon-options">
 				{addOns.map((addon) => {
 					//render the elements with a checkmark if the is checked property is true
@@ -47,7 +45,7 @@ const AddOns = () => {
 								key={addon.title}
 								onClick={handleSelectAddOn}
 							>
-								<div className="checkmark-icon-container">
+								<div className="checkmark-icon-container checked">
 									<img src={checkmark} className="checkmark-icon" />
 								</div>
 								<div className="addon-details">

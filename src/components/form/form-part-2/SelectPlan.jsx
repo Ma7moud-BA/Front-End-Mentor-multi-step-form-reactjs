@@ -56,8 +56,8 @@ const SelectPlan = () => {
 	};
 	return (
 		<div className="select-your-plan-container">
-			<h1>Select your plan </h1>
-			<p>You have the option of monthly or yearly billing</p>
+			<h1 className="title">Select your plan </h1>
+			<p className="desc">You have the option of monthly or yearly billing</p>
 			<div className="plans-container">
 				<div
 					className="plan-container active"
@@ -96,15 +96,18 @@ const SelectPlan = () => {
 				</div>
 			</div>
 			<div className="switch-container">
+				<span>yearly</span>
+				<label className="switch">
+					<input
+						type="checkbox"
+						name="selectPlan"
+						onChange={() => {
+							handleSetPaymentMethod();
+						}}
+					/>
+					<span className="slider round"></span>
+				</label>
 				<span>monthly</span>
-				<input
-					type="checkbox"
-					name="selectPlan"
-					onChange={() => {
-						handleSetPaymentMethod();
-					}}
-				/>
-				<span>yearly/</span>
 			</div>
 			<Footer showGoBack={true}></Footer>
 		</div>
